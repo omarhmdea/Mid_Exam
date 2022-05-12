@@ -1,3 +1,19 @@
+
+class Renderer {
+    constructor(){
+        
+    }
+    render(data){
+
+        const source = $('#recipe-template').html()
+        const template = Handlebars.compile(source);
+        const newHTML = template({recipes:data})
+        $('.recipe-container').append(newHTML)  
+    }
+}
+
+const renderer = new Renderer()
+
 const ingredientSerach = function () {
     let ingredientName = $("#ingredient-input").val()
 
@@ -16,7 +32,8 @@ const ingredientSerach = function () {
 
             clearRecipe.push(recipeObj)
         });
-
-        console.log(clearRecipe);
+        
+        renderer.render(clearRecipe);
     })
-} 
+}
+

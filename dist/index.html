@@ -13,6 +13,24 @@
         <button  onclick=ingredientSerach()>Search!</button><br>
     </div>
 
+    <div class="recipe-container"></div>
+
+    <script id="recipe-template" type="text/x-handlebars-template">
+        {{#each recipes}}
+            <div class="recipe-box">
+                <a href = "{{href}}">{{title}}</a>
+                <div id="img-container">
+                    <img src="{{thumbnail}}" alt="">
+                </div>
+                <ul>
+                    {{#each ingredients}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ul>
+            </div>
+        {{/each}}      
+    </script>
+    
     <script src="./jquery/dist/jquery.js"></script>
     <script src="./handlebars/dist/handlebars.js"></script>
     <script src="main.js"></script>
