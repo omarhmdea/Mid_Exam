@@ -10,7 +10,7 @@
     
     <div id="search">
         <input type="text" id="ingredient-input">
-        <button  onclick=ingredientSerach()>Search!</button><br>
+        <button  onclick=ingredientSerach()>Search!</button><br><br>
     </div>
 
     <div class="recipe-container"></div>
@@ -18,11 +18,12 @@
     <script id="recipe-template" type="text/x-handlebars-template">
         {{#each recipes}}
             <div class="recipe-box">
-                <a href = "{{href}}">{{title}}</a>
+
+                <a href = "{{href}}"><h2>{{title}}</h2></a>
                 <div id="img-container">
                     <img src="{{thumbnail}}" alt="">
                 </div>
-                <ul>
+                <ul id="ingredientsList">
                     {{#each ingredients}}
                         <li>{{this}}</li>
                     {{/each}}

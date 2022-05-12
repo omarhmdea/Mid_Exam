@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(199, 197, 194);
+
+}
+.recipe-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.recipe-box {
+    display: grid;
+    background-color: rgb(230, 195, 0);
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px 5px;
+
+}
+
+img {
+    -webkit-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    height: 100;
+    width: 100px;
+    border-radius: 5px 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#ingredientsList {
+    display: flex;
+    flex-flow: column wrap;
+}
