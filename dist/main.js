@@ -37,3 +37,9 @@ const ingredientSerach = function () {
     })
 }
 
+$('.recipe-container').on('click','#img-container', function(){
+    let ingredients = $(this).siblings('ul')
+    let firstIngredients = $(ingredients.find('li')[0]).text()
+    alert(firstIngredients)
+})
+
