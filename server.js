@@ -10,7 +10,6 @@ app.use(express.static(path.join(__dirname, 'node_modules')))
 
 app.get('/recipes/:ingredient', function (request, response) {
     urllib.request(`https://recipes-goodness.herokuapp.com/recipes/${request.params.ingredient}`, function (err, data, res) {
-        console.log(data);
         response.send(data);
 
     })
